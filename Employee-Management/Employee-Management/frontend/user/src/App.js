@@ -1,12 +1,16 @@
 
 import './App.css';
+ import './paymentComponent/Payment.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import FormSwitcher from './paymentComponent/FormSwitcher';
+ 
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+  return (  
+    
+         <FormSwitcher />     
   );
 }
 
 export default App;
+
