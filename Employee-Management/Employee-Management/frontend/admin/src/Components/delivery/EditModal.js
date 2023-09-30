@@ -64,7 +64,7 @@ function EditModal({ data }) {
     <Modal
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
-      open={open}
+      open={true}
       trigger={<button className="btn btn bg-warning">Edit</button>}
     >
       <Modal.Header>Edit -{data._id} </Modal.Header>

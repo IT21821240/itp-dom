@@ -26,7 +26,7 @@ import ListSupplier from './Components/Supplier/ListSupplier';
 import AddSupplier from './Components/Supplier/AddSupplier';
 import ViewSupplier from './Components/Supplier/ViewSupplier';
 
-import Addstud from "./Components/delivery/AddDelivery";
+import AddDelivery from './Components/delivery/AddDelivery';
 import Editstud from "./Components/delivery/Editstud";
 import Viewstud from "./Components/delivery/Viewstud";
 import AllDelivery from "./Components/delivery/AllDelivery";
@@ -77,13 +77,13 @@ function App() {
 
                 <Route path="/view/:id" element={<ViewSupplier/>}/>
 
-        <Route path="/alldel" element={<AllDelivery />} />
+                <Route path="/delivery" element={<AllDelivery />} />
 
-        <Route path="/addstud" element={<Addstud />} />
+        <Route path="/add-delivery" element={<AddDelivery />} />
 
-        <Route path="/editstud/:id" element={<Editstud />} />
+        <Route path="/editstud/:id" element={<Editstud />} /> 
 
-        <Route path="/viewstud/:id" element={<Viewstud />} />
+          <Route path="/viewstud/:id" element={<Viewstud />} />
         </Routes>
     </Router>
     </div>

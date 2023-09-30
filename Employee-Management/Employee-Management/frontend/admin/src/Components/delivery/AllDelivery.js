@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import "./AllDelivery.css";
 import DeleteModal from "./DeleteModal";
 import { fetchDeliveries } from "../Api/deliveryApi";
 import EditModal from "./EditModal";
 import { Table } from "semantic-ui-react";
+import ModalExampleModal from "./ModalSample";
 const AllDelivery = () => {
   const [deliveries, setDeliveries] = useState([]);
   useEffect(() => {
@@ -18,7 +18,7 @@ const AllDelivery = () => {
   return (
     <div className="container mt-5">
       <div className="mt-3 delivery-case">
-        <Link className="btn btn-success" to="/addstud">
+        <Link className="btn btn-success" to="/add-delivery">
           ADD DELIVERY
         </Link>
       </div>
@@ -44,6 +44,7 @@ const AllDelivery = () => {
                 {" "}
                 <EditModal data={delivery} />
                 <DeleteModal deliveryId={delivery._id} />
+                <ModalExampleModal/>
               </Table.Cell>
               <Table.Row />
             </>
