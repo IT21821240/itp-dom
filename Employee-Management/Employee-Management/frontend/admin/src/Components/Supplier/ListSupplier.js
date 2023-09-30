@@ -15,6 +15,7 @@ class ListSupplier extends Component {
     }
 
     async delete(id) {
+        console.log('log clicked', id)
         const deletedSupplier = await del(`supplier/${id}`)
 
         const suppliers = this.state.suppliers.filter(supplier => supplier._id !== deletedSupplier._id)
@@ -81,11 +82,9 @@ class ListSupplier extends Component {
                                     <Link to={`/edit/${supplier._id}`}>
                                         <i className="fa fa-pencil" aria-hidden="true"></i>
                                     </Link>
-                                    <i
-                                        className="fa fa-ban delete-icon"
-                                        aria-hidden="true"
-                                        onClick={this.delete.bind(this, supplier._id)}>
-                                    </i>
+                                    <span onClick={this.delete.bind(this, supplier._id)}>
+                                        <i className="fa fa-ban delete-icon" aria-hidden="true"></i>
+                                    </span>
                                 </tr>
                             )
                         })

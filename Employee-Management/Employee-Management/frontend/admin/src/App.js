@@ -22,7 +22,6 @@ import AllLeave from "./Components/Employee/AllLeaves";
 
 import ListSupplier from './Components/Supplier/ListSupplier'
 import AddSupplier from './Components/Supplier/AddSupplier'
-import Editstud from './Components/Supplier/Editstud'
 import ViewSupplier from './Components/Supplier/ViewSupplier'
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -65,7 +64,7 @@ function App() {
 
                 <Route path="/add" element={<AddSupplier/>}/>
 
-                <Route path="/edit/:id" element={<Editstud/>}/>
+                <Route path="/edit/:id" element={<AddSupplier/>}/>
 
                 <Route path="/view/:id" element={<ViewSupplier/>}/>
         </Routes>

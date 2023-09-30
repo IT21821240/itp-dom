@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { get, post, put } from './request'
 import withRouteUtil from './withRouteUtil'
+import AdminDashBoard from "../Employee/AdminDashBoard";
 
 const Input = ({ name, label, onChange, value }) => {
     return (
@@ -49,23 +50,24 @@ class AddSupplier extends Component {
     async addSupplier() {
         const supplier = await post('supplier', this.state.createRequest)
 
-        this.props.navigate('/')
+        this.props.navigate('/adhome')
     }
 
     async updateSupplier() {
         const supplier = await put('supplier', this.state.createRequest)
 
-        this.setState({ createRequest: {} })
+        this.props.navigate('/list')
     }
 
     render() {
         const { id, createRequest = {} } = this.state
 
         return (
+            <div>
+                <AdminDashBoard></AdminDashBoard>
             <div className="container mt-5">
                 <div className="mx-auto w-50 shadow p-5">
-                    <Link className="btn btn-primary" to="/"> Home</Link>
-
+                
                     <h3 className="mt-5">Fill the Details</h3>
 
                     <Input
@@ -138,6 +140,7 @@ class AddSupplier extends Component {
                     }
 
                 </div>
+            </div>
             </div>
         )
     }

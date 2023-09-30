@@ -151,17 +151,11 @@ function AdminSideBar() {
                   data-bs-parent="#sidenavAccordion"
                 >
                   <nav class="sb-sidenav-menu-nested nav accordion">
-                    <a class="nav-link" style={{color:"white"}} href="/add">
+                  <a class="nav-link" style={{color:"white"}} href="/add">
                       Add Suppliers
                     </a>
-                    <a className="nav-link" style={{color:"white"}} href="/view/:id">
-                      View Suppliers
-                    </a>
                     <a className="nav-link" style={{color:"white"}} href="/list">
-                      List of Suppliers
-                    </a>
-                    <a className="nav-link" style={{color:"white"}} href="/edit/:id">
-                      Edit Suppliers
+                      List all Suppliers
                     </a>
 
                     <div
