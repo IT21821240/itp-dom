@@ -22,9 +22,14 @@ import AllLeave from "./Components/Employee/AllLeaves";
 
 import PaymentPage from "../src/Components/Payment/Payment";
 
-import ListSupplier from './Components/Supplier/ListSupplier'
-import AddSupplier from './Components/Supplier/AddSupplier'
-import ViewSupplier from './Components/Supplier/ViewSupplier'
+import ListSupplier from './Components/Supplier/ListSupplier';
+import AddSupplier from './Components/Supplier/AddSupplier';
+import ViewSupplier from './Components/Supplier/ViewSupplier';
+
+import Addstud from "./Components/delivery/AddDelivery";
+import Editstud from "./Components/delivery/Editstud";
+import Viewstud from "./Components/delivery/Viewstud";
+import AllDelivery from "./Components/delivery/AllDelivery";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -71,6 +76,14 @@ function App() {
                 <Route path="/edit/:id" element={<AddSupplier/>}/>
 
                 <Route path="/view/:id" element={<ViewSupplier/>}/>
+
+        <Route path="/alldel" element={<AllDelivery />} />
+
+        <Route path="/addstud" element={<Addstud />} />
+
+        <Route path="/editstud/:id" element={<Editstud />} />
+
+        <Route path="/viewstud/:id" element={<Viewstud />} />
         </Routes>
     </Router>
     </div>
