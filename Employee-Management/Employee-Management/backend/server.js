@@ -53,3 +53,6 @@ app.use("/leave",leaveRouter);
 
 const supplierRouter = require("./routes/supplier.js");
 app.use("/supplier",supplierRouter);
+
+const paymentRouter = require("./routes/Payment.js")
+app.use("/payment",paymentRouter);
