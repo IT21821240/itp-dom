@@ -56,3 +56,6 @@ app.use("/supplier",supplierRouter);
 
 const paymentRouter = require("./routes/Payment.js")
 app.use("/payment",paymentRouter);
+
+const deliveryRouter = require("./controllers/deliveryController.js")
+app.use("/deliveryadd",deliveryRouter);
