@@ -246,18 +246,7 @@ function AdminSideBar() {
                     >
                       View Leave Applications
                     </a>
-                    <a
-                      className="nav-link"style={{color:"white"}}
-                      href="http://localhost:3000/addsalary"
-                    >
-                      Add salary transaction
-                    </a>
-                    <a
-                      className="nav-link"style={{color:"white"}}
-                      href="http://localhost:3000/allsalary"
-                    >
-                      View Salary transaction
-                    </a>
+                   
 
                     <div
                       class="collapse"
@@ -291,15 +280,10 @@ function AdminSideBar() {
                   data-bs-parent="#sidenavAccordion"
                 >
                   <nav class="sb-sidenav-menu-nested nav accordion">
-                    <a class="nav-link" style={{color:"white"}} href = "http://localhost:3000/financeOverview">
+                    <a class="nav-link" style={{color:"white"}} href = "/payment">
                       Overview
                     </a>
-                    <a className="nav-link" style={{color:"white"}}href="http://localhost:3000/financeTrans">
-                      Transaction
-                    </a>
-                    <a class="nav-link" style={{color:"white"}}href="http://localhost:3000/bills">
-                      Bills
-                    </a>
+                  
 
                     <div
                       class="collapse"

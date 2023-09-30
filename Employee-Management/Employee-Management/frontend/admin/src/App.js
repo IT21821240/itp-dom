@@ -20,6 +20,8 @@ import ViewLeaveSE from "./Components/SalesExecutive/SalesExecutiveViewLeave";
 import ViewLeaveDD from "./Components/DeliveryDriver/DeliveryDriverViewLeave";
 import AllLeave from "./Components/Employee/AllLeaves";
 
+import PaymentPage from "../src/Components/Payment/Payment";
+
 import ListSupplier from './Components/Supplier/ListSupplier'
 import AddSupplier from './Components/Supplier/AddSupplier'
 import ViewSupplier from './Components/Supplier/ViewSupplier'
@@ -60,6 +62,8 @@ function App() {
         <Route exact path="/leavese" element={<ViewLeaveSE />} />
         <Route exact path="/leavedd" element={<ViewLeaveDD />} />
 
+        <Route exact path="/payment" element={<PaymentPage />} />
+        
         <Route path="/list" element={<ListSupplier/>}/>
 
                 <Route path="/add" element={<AddSupplier/>}/>
