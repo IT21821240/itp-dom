@@ -27,6 +27,7 @@ const validate = (values) => {
 };
 
 const initialValues = (data) => {
+  console.log(data);
   return {
     status: data.status ? data.status : "",
     address: data.address ? data.address : "",
@@ -64,19 +65,20 @@ function EditModal({ data }) {
     <Modal
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
-      open={true}
+      open={open}
       trigger={<button className="btn btn bg-warning">Edit</button>}
     >
       <Modal.Header>Edit -{data._id} </Modal.Header>
       <Modal.Content>
         <div>
-          <Segment className="form-add">
+       
             <Formik
               initialValues={initialValues(data)}
               validate={validate}
               onSubmit={handleSubmit}
             >
               <Form>
+              <Segment className="form-add">
                 <div className="form-group">
                   <label>Address</label>
 
@@ -147,13 +149,13 @@ function EditModal({ data }) {
                     className="error"
                   />
                 </div>
-
+                </Segment>
                 <Button type="submit" className="btn btn-primary">
                   Submit
                 </Button>
               </Form>
             </Formik>
-          </Segment>
+        
         </div>
       </Modal.Content>
     </Modal>

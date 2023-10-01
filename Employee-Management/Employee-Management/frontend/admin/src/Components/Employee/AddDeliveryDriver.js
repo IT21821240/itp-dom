@@ -121,7 +121,7 @@ function AddDeliveryDriver() {
       <div>
         <div>
           <main>
-            <div className="container1" style={{backgroundColor: "#E8E8E8",} }>
+            <div className="container1" style={{backgroundColor: "#ffffff",} }>
               <div className="row justify-content-center" >
                 <div className="col-lg-5">
                   <br />

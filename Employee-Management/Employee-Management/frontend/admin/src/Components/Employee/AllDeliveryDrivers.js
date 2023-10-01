@@ -189,11 +189,7 @@ export default function AllDeliveryDriver() {
                         onClick={() => {
                           axios.delete(
                             `http://localhost:8070/deliverydriver/deletedd/${Id}`
-                          );
-                          axios
-                            .delete(
-                              `http://localhost:8070/t/delete/${did}`
-                            )
+                          )
                             .then((res) => {
                               if (res.data === "success") {
                                 alert("Delivery Driver deleted successfully");

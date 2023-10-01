@@ -36,7 +36,7 @@ class ListSupplier extends Component {
             <div className="container mt-5">
                 <div className="row mt-3">
                     <div className="col-3">
-                        <Link className="btn btn-success" to="/add">
+                        <Link className="btn btn-success" to="/add" style={{ backgroundColor: '#00334E' }}>
                             Add Supplier
                         </Link>
                     </div>
@@ -76,14 +76,14 @@ class ListSupplier extends Component {
                                     <td>{supplier.category}</td>
                                     <td>{supplier.phone}</td>
                                     <td>{supplier.email}</td>
-                                    <Link to={`/view/${supplier._id}`}>
+                                    <Link to={`/view/${supplier._id}`} style={{ backgroundColor: '#00416a' ,color:'white'}}>
                                         <i className="fa fa-eye" aria-hidden="true"></i>
                                     </Link>
-                                    <Link to={`/edit/${supplier._id}`}>
+                                    <Link to={`/edit/${supplier._id}`} style={{ backgroundColor: '#ffc40c', color:'white'}}>
                                         <i className="fa fa-pencil" aria-hidden="true"></i>
                                     </Link>
-                                    <span onClick={this.delete.bind(this, supplier._id)}>
-                                        <i className="fa fa-ban delete-icon" aria-hidden="true"></i>
+                                    <span onClick={this.delete.bind(this, supplier._id)} >
+                                        <i className="fa fa-ban delete-icon" style={{ backgroundColor: '#7c0a02 ' ,color:'white' }} aria-hidden="true"></i>
                                     </span>
                                 </tr>
                             )

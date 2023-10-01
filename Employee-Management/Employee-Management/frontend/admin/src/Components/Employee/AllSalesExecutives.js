@@ -156,8 +156,6 @@ export default function AllSalesExecutive() {
         </div>
       </div>
 
-     
-      
       <div className="modal" id="myModal">
         <div className="modal-dialog">
           <div className="modal-content">
@@ -186,14 +184,11 @@ export default function AllSalesExecutive() {
                         onClick={() => {
                           axios.delete(
                             `http://localhost:8070/salesexecutive/deletese/${Id}`
-                          );
-                          axios
-                            .delete(
-                              `http://localhost:8070/t/delete/${sid}`
-                            )
+                          )
+                         
                             .then((res) => {
                               if (res.data === "success") {
-                                
+                                alert("sales executive deleted successfully");
                                 window.location.replace("/allse");
                               } else if (res.data === "error") {
                                 alert("Error in deleting sales executive");
@@ -212,8 +207,6 @@ export default function AllSalesExecutive() {
                 type="submit"
                 style={{ marginLeft: "100px" }}
                 href="/allse"
-                
-                
               >
                 No
               </a>

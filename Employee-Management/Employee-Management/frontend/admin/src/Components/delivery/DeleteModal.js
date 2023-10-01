@@ -5,7 +5,7 @@ import { deliverDelete } from "../Api/deliveryApi";
 
 function DeleteModal(props) {
   const [open, setOpen] = React.useState(false);
-
+  console.log(props);
   const handleDelete = async () => {
     try {
       await deliverDelete(props.deliveryId);
@@ -16,6 +16,7 @@ function DeleteModal(props) {
   };
 
   return (
+    // <div class="ui fullscreen modal transition visible active" >
     <Modal
       closeIcon
       open={open}
@@ -36,6 +37,7 @@ function DeleteModal(props) {
         </Button>
       </Modal.Actions>
     </Modal>
+    // </div>
   );
 }
 
